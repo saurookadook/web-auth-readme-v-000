@@ -18,4 +18,13 @@
     <% end %>
     </ul>
   <% end %>
+  <% if @friends.size > 0 %>
+    <ul>
+      <% @friends.each do |friend| %>
+        <li><%= "#{friend['firstName']} #{friend['lastName']}" %></li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>Looks like you don't have any foursquare friends yet.</p>
+  <% end %>
 </div>
